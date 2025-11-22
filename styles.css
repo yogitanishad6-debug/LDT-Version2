@@ -1,0 +1,66 @@
+:root{
+  --bg:#0b1220; --card:#0f1724; --accent:#00c2ff; --accent2:#7c3aed; --muted:#98a0b3; --glass:rgba(255,255,255,0.04);
+  --success:#00d28a;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Arial;}
+body{margin:0;background:linear-gradient(180deg,#071027 0%, #071427 60%);color:#e6eefb;}
+.container{max-width:1200px;margin:18px auto;padding:18px;}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+.brand{display:flex;gap:12px;align-items:center;}
+.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;color:#081024;}
+h1{margin:0;font-size:18px;}
+.usertag{font-size:13px;color:var(--muted);}
+
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:14px;box-shadow:0 8px 30px rgba(3,7,14,0.6);}
+
+.panel .row{display:flex;gap:22px;}
+.col{flex:1;}
+label{display:block;margin:8px 0;color:var(--muted);font-size:13px;}
+input,textarea,select{width:100%;padding:10px;border-radius:8px;border:0;background:var(--glass);color:#e6eefb;}
+.btn{padding:10px 12px;border-radius:10px;border:0;cursor:pointer;margin-top:10px;font-weight:600;}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#021022;}
+.btn.secondary{background:#142230;color:var(--accent);}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);}
+
+.choices-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px;}
+.choice{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);cursor:pointer;border:1px solid rgba(255,255,255,0.03);font-weight:600;color:var(--muted);}
+.choice.active{outline:3px solid rgba(0,194,255,0.12);background:linear-gradient(180deg, rgba(0,194,255,0.06), rgba(124,58,237,0.03));color:#eaf7ff;}
+
+.avatar-row{display:flex;gap:8px;margin-top:8px;}
+.avatar{width:60px;height:60px;border-radius:12px;background:#0b1220;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;cursor:pointer;border:1px solid rgba(255,255,255,0.03);}
+.avatar.selected{box-shadow:0 6px 20px rgba(124,58,237,0.18);transform:translateY(-4px);}
+
+.layout{display:grid;grid-template-columns:260px 1fr 300px;gap:14px;}
+.left,.center,.right{min-height:480px;}
+.profile{display:flex;gap:12px;align-items:center;margin-bottom:12px;}
+.avatarLarge{width:68px;height:68px;border-radius:10px;background:linear-gradient(135deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;color:#021022;}
+.mentorBar{display:flex;gap:10px;align-items:center;padding:10px;border-radius:10px;background:rgba(255,255,255,0.01);margin-bottom:10px;}
+.mentorAvatar{width:48px;height:48px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
+
+.city{height:120px;border-radius:8px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.0));display:flex;gap:8px;align-items:center;justify-content:space-around;padding:10px;color:var(--muted);}
+.city .building{width:80px;height:80px;border-radius:8px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;font-weight:700;cursor:pointer;border:1px solid rgba(255,255,255,0.03);}
+.city .building.active{box-shadow:0 10px 30px rgba(0,194,255,0.07);transform:translateY(-6px);}
+
+.missionList{margin-top:10px;display:flex;flex-direction:column;gap:10px;}
+.missionCard{padding:12px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center;}
+.missionCard .meta{color:var(--muted);font-size:13px;}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+.badge{background:linear-gradient(90deg,var(--accent2),var(--accent));color:#021022;padding:6px 8px;border-radius:10px;font-weight:700;font-size:12px;}
+
+.skillGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;}
+.skillItem{display:flex;gap:10px;align-items:center;padding:8px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02);}
+.skillIcon{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent);}
+.skillBar{height:8px;background:#081022;border-radius:20px;overflow:hidden;width:100%;}
+.skillFill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .6s ease;}
+
+.muted{color:var(--muted);font-size:13px;}
+.mutor{color:var(--muted);font-size:13px;}
+
+.fitScore{font-size:34px;font-weight:800;color:var(--accent);margin:8px 0;}
+
+.modal{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(3,5,10,0.6);display:flex;align-items:center;justify-content:center;padding:20px;}
+.modalCard{width:720px;background:linear-gradient(180deg,#081226,#071022);padding:18px;border-radius:12px;position:relative;}
+.closeBtn{position:absolute;right:12px;top:8px;background:transparent;border:0;color:#fff;font-size:20px;cursor:pointer;}
+
+textarea{min-height:80px;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:#e6eefb;}
+.footer{margin-top:18px;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;}
