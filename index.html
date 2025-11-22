@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CareerSim — Immersive Prototype (Bold)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-b">
+  <div id="app" class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div>
+          <h1>CareerSim</h1>
+          <small>Prototype — Bold & Modern</small>
+        </div>
+      </div>
+      <div id="userTag" class="usertag">Not signed in</div>
+    </header>
+
+    <main id="main">
+      <!-- ONBOARD -->
+      <section id="onboard" class="panel card">
+        <h2>Get started</h2>
+        <div class="row">
+          <div class="col">
+            <label>Nickname<input id="name" placeholder="Your name"></label>
+            <label>Birth year<input id="birth" type="number" placeholder="e.g. 2010"></label>
+            <label>Choose an avatar</label>
+            <div id="avatars" class="avatar-row"></div>
+          </div>
+          <div class="col">
+            <h3>Pick a career family</h3>
+            <div id="families" class="choices-grid"></div>
+            <button id="startBtn" class="btn primary">Start Exploring</button>
+            <button id="quickDemo" class="btn ghost">Quick demo (no save)</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- GAME -->
+      <section id="game" class="hidden">
+        <div class="layout">
+          <aside class="left card">
+            <div class="profile">
+              <div id="avatarLarge" class="avatarLarge"></div>
+              <div>
+                <h3 id="profileName">Student</h3>
+                <div id="profileMeta" class="muted">Age — </div>
+              </div>
+            </div>
+
+            <div class="skillBox">
+              <h4>Skills</h4>
+              <div class="skillGrid" id="skills"></div>
+            </div>
+
+            <div class="badgesBox">
+              <h4>Badges</h4>
+              <div id="badges" class="badges"></div>
+            </div>
+          </aside>
+
+          <section class="center card">
+            <div class="mentorBar">
+              <div id="mentorAvatar" class="mentorAvatar"></div>
+              <div>
+                <div id="mentorName">Mentor</div>
+                <div id="mentorText" class="mutor muted">Welcome — complete missions to grow skills.</div>
+              </div>
+            </div>
+
+            <div id="mapArea" class="mapArea card mini">
+              <h4>Career City</h4>
+              <div id="city" class="city"></div>
+            </div>
+
+            <div id="missions" class="missions">
+              <h4>Available Missions</h4>
+              <div id="missionList" class="missionList"></div>
+            </div>
+          </section>
+
+          <aside class="right card">
+            <div class="readiness card">
+              <h4>Career Readiness</h4>
+              <div id="fitScore" class="fitScore">0%</div>
+              <div id="summary" class="muted">Complete missions to update your profile</div>
+              <button id="export" class="btn secondary">Download Portfolio (JSON)</button>
+              <button id="reset" class="btn ghost">Reset</button>
+            </div>
+
+            <div class="reflect card">
+              <h4>Reflection</h4>
+              <textarea id="reflection" placeholder="What did you learn?"></textarea>
+              <button id="saveReflection" class="btn primary">Save Reflection</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Use resource: <code>/mnt/data/LDT Version 1.0.pdf</code></span>
+      <span>• Hosted free on GitHub Pages</span>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modalCard">
+        <button id="closeModal" class="closeBtn">×</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
